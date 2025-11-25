@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+ int main() {
+ int n,temp,f=0,a,b;
+ scanf("%d",&n);
+ temp=n;
+ while(temp>0){
+    a=temp%10;
+    b=((temp/10)%10);
+    temp=temp/10;
+    if(a<b){
+        f=1;
+        break;
+     }
+ }
+ if(f==0)
+   printf("Progressive");
+   else
+   printf("Not progressive");
+    return 0;
+}
