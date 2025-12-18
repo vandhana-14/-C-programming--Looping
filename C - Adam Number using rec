@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include<math.h>
+int reverse(int n){
+    int rev=0,rem;
+    while(n!=0){
+        rem=n%10;
+        rev=rev*10+rem;
+        n=n/10;
+    }
+    //printf("%d",rev);
+    return rev;
+}
+int sqr(int c){
+    int sqr;
+    sqr=c*c;
+    return sqr;
+}
+int root(int e){
+    int root;
+    root=sqrt(e);
+    return root;
+}
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    reverse(n);
+    printf("%d",reverse(n));
+int c = reverse(n);
+sqr(c);
+printf("\n%d",sqr(c));
+int d = sqr(c);
+reverse(d);
+printf("\n%d",reverse(d));
+int e = reverse(d);
+root(e);
+printf("\n%d",root(e));
+if(root(e)==n){
+    printf("Addam");
+}
+else{
+    printf("Not");
+}
+    return 0;
+}
