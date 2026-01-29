@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    
+    char str[200],old[20],new[20],result[200];
+    int i=0,j=0,k,flag;
+    
+    printf("Enter The Line:");
+    gets(str);
+    
+    printf("Enter The Old Word:");
+    gets(old);
+    
+    printf("Enter The New Word:");
+    gets(new);
+    
+    // fgets(str,sizeof(str),stdin);    
+
+    while(str[i]!='\0'){
+        flag=1;
+        for(k=0;old[k]!='\0';k++){
+            if(str[i+k]!=old[k]){
+                flag=0;
+                break;
+            }
+        }
+        
+        if(flag){
+            for(k=0;new[k]!='\0';k++){
+                result[j++]=new[k];
+            }
+            
+            i=i+strlen(old);
+            
+        }
+        else{
+            result[j++]=str[i++];
+        }
+    }
+    
+    result[j]='\0';
+    printf("Final Line:%s",result);
+    
+    return 0;
+    
+}
